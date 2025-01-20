@@ -10,6 +10,4 @@ https://i.postimg.cc/BQ1wVZB7/download-7.jpg
 [![cropped-image.png](https://i.postimg.cc/T3ss7yZs/cropped-image.png)](https://postimg.cc/3kg9Wwrj)
 https://i.postimg.cc/T3ss7yZs/cropped-image.png
 https://drive.google.com/file/d/1uEykljqTOo1WBsFx4zxgHk8QAX8ZMvXz/view?usp=drive_link
-<link rel="icon" type="image/png" sizes="16x16"  href="/favicons/favicon-16x16.png">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="theme-color" content="#ffffff">
+
