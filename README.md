@@ -6,3 +6,5 @@ https://i.postimg.cc/90FG20G5/assa.jpg
 https://i.postimg.cc/G90T2xND/bruno-da-lulu1.jpg
 [![download-7.jpg](https://i.postimg.cc/BQ1wVZB7/download-7.jpg)](https://postimg.cc/MvqDcS41)
 https://i.postimg.cc/BQ1wVZB7/download-7.jpg
+[![cropped-image.png](https://i.postimg.cc/T3ss7yZs/cropped-image.png)](https://postimg.cc/3kg9Wwrj)
+https://i.postimg.cc/T3ss7yZs/cropped-image.png
