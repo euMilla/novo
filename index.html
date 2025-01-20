@@ -362,28 +362,6 @@ setInterval(countdown, 1000);
         });
 
 
-        // super corações flutuantes
-// ---------------------------------------------------------------------------------------------------------------------
-function createFloatingHearts() {
-    const container = document.getElementById('floating-hearts');
-
-    setInterval(() => {
-        const heart = document.createElement('div');
-        heart.classList.add('heart');
-        heart.style.left = `${Math.random() * 100}%`;
-        heart.style.top = `${Math.random() * 100}%`;
-        heart.style.animationDuration = `${3 + Math.random() * 2}s`;
-        heart.style.opacity = Math.random();
-        container.appendChild(heart);
-        setTimeout(() => heart.remove(), 5000);
-    }, 300);
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    createFloatingHearts();
-});
-
-
 // ---------------------------------------------------------------------------------------------------------------------
 // alteração dinâmica do title
 // ---------------------------------------------------------------------------------------------------------------------
