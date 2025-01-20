@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoje é seu dia, vidinha! ❤️</title>
+    <style>
+   /* Estilos do body, header e menu permanecem como estão */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #a11707;
+    color: #333;
+    overflow-x: hidden;
+    position: relative;
+}
+
+header {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #6f0303;
+    color: white;
+    font-size: 2em;
+    border-bottom: 2px solid #a41010;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+} 
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+    text-align: center;
+}
+
+nav ul li a {
+    color: #fd9a9a;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Estilo específico para o quiz */
+.quiz {
+    background-color: #ffe9e9;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto; /* Centraliza o quiz horizontalmente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Ajusta a largura do quiz */
+    max-width: 600px; /* Limita a largura máxima */
+    text-align: left; /* Alinha o conteúdo do quiz à esquerda */
+}
+
+.quiz h2 {
+    color: #ff6b6b;
+    text-align: center; /* Mantém o título centralizado dentro do quiz */
+}
+
+.quiz input[type="radio"] {
+    margin-right: 10px;
+}
+
+.quiz button {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.quiz button:hover {
+    background-color: #ff4c4c;
+}
+
+/* Estilo para o resultado */
+#quizResult {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Animação dos corações */
+.hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    clip-path: polygon(50% 0%, 61% 19%, 81% 19%, 100% 39%, 81% 61%, 61% 100%, 50% 81%, 39% 100%, 19% 61%, 0% 39%, 19% 19%, 39% 19%);
+    animation: float 4s infinite;
+    opacity: 0.7;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+    </style>
+    </head>
+    <body>
+        <header>
+            <H1> Feliz 1 mês de namoro! 🎉❤️</H1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Cartinha</a></li>
+                    <li><a href="birthday.html">Nossa Música</a></li>
+                    <li><a href="toyou.html">Quiz do Amor</a></li>
+                </ul>
+            </nav>
+        </header>
+                <!-- Seu Quiz Original -->
+                <!-- Seu Quiz de Amor -->
+<div class="quiz">
+    <h2>Quiz de Amor 😘</h2>
+    <form id="quizForm">
+        <p><strong>1. Se você fosse me descrever em uma palavra, qual palavra seria?</strong></p>
+        <textarea id="response1" rows="4" cols="50" placeholder="Escreva sua resposta aqui..."></textarea><br>
+        
+        <p><strong>2. Defina nosso relacionamento em 3 palavras.</strong></p>
+        <textarea id="response2" rows="4" cols="50" placeholder="Escreva sua resposta aqui..."></textarea><br>
+        
+        <p><strong>3. O que você mais ama em mim?</strong></p>
+        <textarea id="response3" rows="4" cols="50" placeholder="Escreva sua resposta aqui..."></textarea><br>
+        
+        <p><strong>4. Quem se apaixonou primeiro?</strong></p>
+        <textarea id="response4" rows="4" cols="50" placeholder="Escreva sua resposta aqui..."></textarea><br>
+
+        <p><strong>5. Quem disse o primeiro 'Eu Te Amo'?</strong></p>
+        <textarea id="response5" rows="4" cols="50" placeholder="Escreva sua resposta aqui..."></textarea><br>
+        
+        <button type="button" onclick="submitQuiz()">Enviar respostas</button>
+    </form>
+
+    <div id="quizResult"></div>
+</div>
+
+            </div>
+        
+           
+            <div class="hearts" id="hearts"></div>
+        
+            <script>
+               
+                function createHearts() {
+                    for (let i = 0; i < 15; i++) {
+                        const heart = document.createElement('div');
+                        heart.className = 'heart';
+                        heart.style.left = `${Math.random() * 100}%`;
+                        heart.style.animationDuration = `${Math.random() * 3 + 2}s`;
+                        heart.style.animationDelay = `${Math.random() * 5}s`;
+                        document.getElementById('hearts').appendChild(heart);
+                    }
+                }
+        
+                createHearts();
+        
+              
+                function submitQuiz() {
+    const resultDiv = document.getElementById('quizResult');
+    
+    // Pegando as respostas do usuário
+    const response1 = document.getElementById('response1').value;
+    const response2 = document.getElementById('response2').value;
+    const response3 = document.getElementById('response3').value;
+    const response4 = document.getElementById('response4').value;
+    const response5 = document.getElementById('response5').value;
+
+    // Exibindo as respostas salvas
+    resultDiv.innerHTML = `
+        <h3>Suas respostas:</h3>
+        <p><strong>2. Se você fosse me descrever em uma palavra, qual palavra seria?</strong> ${response1 ? response1 : 'Você não escreveu uma resposta.'}</p>
+        <p><strong>3. Defina nosso relacionamento em 3 palavras.</strong> ${response2 ? response2 : 'Você não escreveu uma resposta.'}</p>
+        <p><strong>4. O que você mais ama em mim?</strong> ${response3 ? response3 : 'Você não escreveu uma resposta.'}</p>
+        <p><strong>5. Quem se apaixonou primeiro?</strong> ${response4 ? response4 : 'Você não escreveu uma resposta.'}</p>
+        <p><strong>6. Quem disse o primeiro 'Eu Te Amo'?</strong> ${response5 ? response5 : 'Você não escreveu uma resposta.'}</p>
+    `;
+
+    // Caso o usuário não tenha preenchido alguma resposta, você pode adicionar uma mensagem para incentivá-lo a escrever.
+    if (!response1 || !response2 || !response3 || !response4 || !response5) {
+        resultDiv.innerHTML += `<p style="color: red;">Parece que você não preencheu todas as respostas. Por favor, preencha todas!</p>`;
+    }
+}
+
+            </script>
+        </body>
+        </html>
+        

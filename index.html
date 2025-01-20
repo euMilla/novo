@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoje é nosso dia! ❤️</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:#a11707;
+            color: #333;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        img {
+        width: 60%;
+        margin: auto;
+        display: block;
+        }
+
+        header {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #8c0606;
+            color: white;
+            font-size: 2em;
+            border-bottom: 2px solid #ac1414;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        } 
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+            text-align: center;
+        }
+
+        nav ul li a {
+            color: #fd9a9a;
+            text-decoration: none;
+        }
+
+        h1 {
+            font-size: 2em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .cake-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 100px auto;
+        }
+
+        .cake-button img {
+            cursor: pointer;
+            max-width: 250px; 
+            transition: transform 0.3s ease;
+            border-radius: 15px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .cake-button img:hover {
+            transform: scale(1.1); 
+        }
+
+        .cake-button p {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: white;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .card {
+            min-width: 100%;
+            margin: 0;
+            padding: 15px; 
+            background-color: #c79e6f;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden; 
+            height: auto; /
+        }
+
+        .card p {
+            font-size: 1.2em; 
+            line-height: 1.2;
+            word-wrap: break-word; 
+        } 
+
+        .carousel {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .carousel-track {
+           display: flex;
+           transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .carousel-buttons button {
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.5em;
+        }
+
+        .carousel-buttons button:hover {
+            background-color: #ff4c4c;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+            background-color: #6b0a0a;
+            color: white;
+        }
+
+        .countdown {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            clip-path: polygon(50% 0%, 61% 19%, 81% 19%, 100% 39%, 81% 61%, 61% 100%, 50% 81%, 39% 100%, 19% 61%, 0% 39%, 19% 19%, 39% 19%);
+            animation: float 4s infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Botão do bolo -->
+    <div class="cake-button">
+        <img src="Downloads/_3.jpeg" alt="Nós" id="cake">
+        <p>Clique na imagem para começar a surpresa!</p>
+    </div>
+
+  
+    <div id="mainContent" style="display: none;">
+        <header>
+            <h1>Nosso 1, Meu Amor! 🎉❤️</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Cartinha</a></li>
+                    <li><a href="birthday.html">Nossa Música</a></li>
+                    <li><a href="toyou.html">Quiz do Amor</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7lAlnayDxaxyVLi72fkeop?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        
+        <div class="container">
+            <div class="carousel">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="card">
+                        <h2>Carta 1: ❤</h2>
+                        <p>
+                        Oi, meu ursinho!  
+                        <br>
+                        O nosso tão esperado 1 mês de namoro chegou! 😍  
+                        <br>
+                        Te agradeço por estar na minha vida, meu amor,  
+                        <br>
+                        e agradeço a Deus por ter te colocado no meu caminho e nos unido.  
+                        </p>
+                        
+                        
+                        <img src="Downloads/download (7).jpeg" alt="Foto da carta 5">
+                    </div>
+
+                    <div class="card">
+                        <h2>Carta 2: 💌</h2>
+                        <p>
+                        Obrigada por ser esse homem incrível,  
+                        <br>
+                        por ter me conquistado e me feito sua.  
+                        <br>
+                        Você me faz tão bem e me deixa muito feliz!  
+                        <br>
+                        Mesmo com nossas briguinhas bobas, a gente sempre dá um jeito de se resolver.  
+                        </p>
+                        
+                        <strong>Sou completamente apaixonada pelo seu sorriso.</strong>
+                        <img src="Downloads/bruno da lulu1.jpg" alt="" style="">   
+                    </div>
+
+                    <div class="card">
+                        <h2>Carta 3: 😍</h2>
+                        <p>
+                        Espero que possamos brigar menos e aproveitar mais nosso tempo juntos,  
+                        <br>
+                        com muito carinho, amor e momentos especiais.  
+                        <br>
+                        Nunca esqueço o dia em que você me pediu em namoro  
+                        <br>
+                        e fez aquela surpresa LINDAAA! 😍 Eu amei demais!  
+                        </p>
+                        
+                        <img src="Downloads/assa.jpeg" alt="">  
+                    </div>
+
+                    <div class="card">
+                        <h2>Carta 4: Para o meu Ursinho ❤️</h2>
+                        <p>
+                        Você foi minha melhor escolha. 
+                        <br>
+                        Eu te amo demais, meu coração se enche de alegria, quando você me manda mensagem,  
+                        <br>
+                        você me tira os melhores sorrisos bobos kkkkk ❤
+                        <br>  
+                        Cada palavra sua ilumina meu dia, e sou muito grata por ter você na minha vida.  
+                        <br>
+                        Vou sempre fazer de tudo para te ver feliz.
+                        <br>  
+                        Você é tudo meu nego ❤  
+                        <br>
+                        Obrigada por ser incrivel comigo!
+                        <br>
+                        FELIZ 1 MÊS DE NAMORO 😍❤  
+                        <br>
+                        EU TE AMOO DEMAIS, MEU PRÍNCIPE ❤❤❤❤ 
+                        <br>
+                        Ainda não temos fotinha junto, mas considero que essa representa! 
+                        </p>
+                        
+                        
+                        <strong>Com amor, Sua Princesa. 💕</strong> 
+                        </p>
+                            <img src="Downloads/cropped_image.png" alt="">
+                    </div>
+                </div>
+                <div class="carousel-buttons">
+                    <button id="prevButton">❮</button>
+                    <button id="nextButton">❯</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+    <footer>
+        <div class="countdown" id="countdown"></div>
+    </footer>
+
+    <div class="hearts" id="hearts"></div>
+
+    <script>
+       
+        document.getElementById('cake').addEventListener('click', () => {
+            document.querySelector('.cake-button').style.display = 'none';
+            document.getElementById('mainContent').style.display = 'block';
+        });
+
+       
+        function createHearts() {
+            for (let i = 0; i < 15; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.style.left = `${Math.random() * 100}%`;
+                heart.style.animationDuration = `${Math.random() * 3 + 2}s`;
+                document.getElementById('hearts').appendChild(heart);
+            }
+        }
+
+        createHearts();
+
+        function countdown() {
+         const now = new Date();
+    
+         const targetDate = new Date("2024-12-16T23:59:59"); 
+
+         const diff = targetDate - now;
+
+    if (diff <= 0) {
+        document.getElementById('countdown').innerHTML = "Já é hoje!";
+    } else {
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        document.getElementById('countdown').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+}
+
+setInterval(countdown, 1000);
+
+
+        setInterval(countdown, 1000);
+
+       
+        let currentIndex = 0;
+
+        document.getElementById('nextButton').addEventListener('click', () => {
+            const track = document.getElementById('carouselTrack');
+            currentIndex = (currentIndex + 1) % track.children.length;
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        });
+
+        document.getElementById('prevButton').addEventListener('click', () => {
+            const track = document.getElementById('carouselTrack');
+            currentIndex = (currentIndex - 1 + track.children.length) % track.children.length;
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        });
+    </script>
+</body>
+</html>
